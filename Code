@@ -1,0 +1,50 @@
+print("*************************")
+print("Ne bulmak istersin?")
+print("1.Dikdörtgen")
+print("2.Üçgen")
+print("*************************")
+secim = int(input("İkisinden birini seç: "))
+if secim == int(1):
+    kenar1 = abs(int(input("Birinci kenarın uzunluğunu yaz: ")))
+    kenar2 = abs(int(input("İkinci kenarın uzunluğunu yaz: ")))
+    kenar3 = abs(int(input("Üçüncü kenarın uzunluğunu yaz: ")))
+    kenar4 = abs(int(input("Dördüncü kenarın uzunluğunu yaz: ")))
+
+    if kenar1 == kenar2 and kenar2 == kenar3 and kenar3==kenar4:
+        print("Girdiğin ölçüler bir kareye ait.")
+    elif kenar1 == kenar2 and kenar1 > kenar3 and kenar3 == kenar4:
+        print("Girdiğin ölçüler bir dikdörtgene ait.")
+    elif kenar1 == kenar3 and kenar1 > kenar2 and kenar2 == kenar4:
+        print("Girdiğin ölçüler bir dikdörtgene ait.")
+    elif kenar1 == kenar4 and kenar1 > kenar3 and kenar2 == kenar3:
+        print("Girdiğin ölçüler bir dikdörtgene ait.")
+    elif kenar2 == kenar3 and kenar2 > kenar1 and kenar1 == kenar4:
+        print("Girdiğin ölçüler bir dikdörtgene ait.")
+    elif kenar2 == kenar4 and kenar2 > kenar1 and kenar1 == kenar3:
+        print("Girdiğin ölçüler bir dikdörtgene ait.")
+    elif kenar3 == kenar4 and kenar3 > kenar1 and kenar1 == kenar2:
+        print("Girdiğin ölçüler bir dikdörtgene ait.")
+    else:
+        print("Girdiğin ölçüler bir dörtgene ait.")
+if secim == int(2):
+    kenar1 = abs(int(input("Birinci kenarın uzunluğunu yaz: ")))
+    kenar2 = abs(int(input("İkinci kenarın uzunluğunu yaz: ")))
+    kenar3 = abs(int(input("Üçüncü kenarın uzunluğunu yaz: ")))
+    sart1 = abs(kenar2-kenar3)<kenar1<abs(kenar2+kenar3)
+    sart2 = abs(kenar1-kenar3)<kenar2<abs(kenar1+kenar3)
+    sart3 = abs(kenar2-kenar1)<kenar3<abs(kenar2+kenar1)
+
+    if sart1 or sart2 or sart3 and kenar1 == kenar2 and kenar2 == kenar3:
+        print("Girdiğin ölçüler bir eşkenar üçgene ait.")
+    elif sart1 or sart2 or sart3 and kenar1 == kenar2 and kenar2 != kenar3:
+        print("Girdiğin ölçüler bir ikizkenar üçgene ait.")
+    elif sart1 or sart2 or sart3 and kenar1 == kenar3 and kenar1 != kenar2:
+        print("Girdiğin ölçüler bir ikizkenar üçgene ait.")
+    elif sart1 or sart2 or sart3 and kenar2 == kenar3 and kenar2 != kenar1:
+        print("Girdiğin ölçüler bir ikizkenar üçgene ait.")
+    elif sart1 or sart2 or sart3:
+        print("Girdiğin ölçüler bir normal üçgene ait.")
+    else:
+        print("Girdiğin ölçüler bir üçgen belirtmiyor .")
+else:
+    print("Birdahaki sefere 1 veya 2'yi seç.")
