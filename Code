@@ -34,13 +34,13 @@ if secim == int(2):
     sart2 = abs(kenar1-kenar3)<kenar2<abs(kenar1+kenar3)
     sart3 = abs(kenar2-kenar1)<kenar3<abs(kenar2+kenar1)
 
-    if sart1 or sart2 or sart3 and kenar1 == kenar2 and kenar2 == kenar3:
+    if (sart1 or sart2 or sart3) and (kenar1 == kenar2 and kenar2 == kenar3):
         print("Girdiğin ölçüler bir eşkenar üçgene ait.")
-    elif sart1 or sart2 or sart3 and kenar1 == kenar2 and kenar2 != kenar3:
+    elif (sart1 or sart2 or sart3) and (kenar1 == kenar2 and kenar2 != kenar3):
         print("Girdiğin ölçüler bir ikizkenar üçgene ait.")
-    elif sart1 or sart2 or sart3 and kenar1 == kenar3 and kenar1 != kenar2:
+    elif (sart1 or sart2 or sart3) and (kenar1 == kenar3) and (kenar1 != kenar2):
         print("Girdiğin ölçüler bir ikizkenar üçgene ait.")
-    elif sart1 or sart2 or sart3 and kenar2 == kenar3 and kenar2 != kenar1:
+    elif (sart1 or sart2 or sart3) and (kenar2 == kenar3) and (kenar2 != kenar1):
         print("Girdiğin ölçüler bir ikizkenar üçgene ait.")
     elif sart1 or sart2 or sart3:
         print("Girdiğin ölçüler bir normal üçgene ait.")
@@ -48,3 +48,15 @@ if secim == int(2):
         print("Girdiğin ölçüler bir üçgen belirtmiyor .")
 else:
     print("Birdahaki sefere 1 veya 2'yi seç.")
+
+
+
+
+
+
+
+
+
+
+
+
